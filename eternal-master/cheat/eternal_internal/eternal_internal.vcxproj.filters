@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Code">
+      <UniqueIdentifier>{02a12391-0434-4b99-954a-d993325c1e10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK">
+      <UniqueIdentifier>{ab4d82ac-ed02-44ae-bcac-e1b4c05a7bd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Minecraft">
+      <UniqueIdentifier>{0ba5e596-fa5c-45ec-ab1b-ce5949b76a71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Player">
+      <UniqueIdentifier>{555e39cc-429f-43da-a919-9c6856a861e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Minecraft">
+      <UniqueIdentifier>{15bf75fe-c4df-4e03-a864-53f6a80e0212}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\World">
+      <UniqueIdentifier>{675ef21b-4bbc-48ee-a970-aded7af1ec17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\vec3">
+      <UniqueIdentifier>{c957fd68-5b65-4b8e-a253-fcf1c852f39c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Block">
+      <UniqueIdentifier>{c71c1878-5c90-4afa-b300-fd5a9fea855e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats">
+      <UniqueIdentifier>{560b7374-8000-4a8d-afbe-a26c06a6a0b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\AxisAlignedBB">
+      <UniqueIdentifier>{29743201-793a-465d-bc7b-b9460ec4d26a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\ItemStack">
+      <UniqueIdentifier>{ace14b54-e963-4943-905b-0f9f5ac97531}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Item">
+      <UniqueIdentifier>{c0ec89f4-c714-4341-91ca-334710510f2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\SelfDestruct">
+      <UniqueIdentifier>{a9c7992c-968c-48ee-bec8-a9e48a56ea85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Timer">
+      <UniqueIdentifier>{a41375b3-4276-46be-8e06-88168545e367}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\BlockPos">
+      <UniqueIdentifier>{74c2c1ce-9860-4c6d-8ac1-c3dc87c2b8ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\GameSettings">
+      <UniqueIdentifier>{9982dfc5-ba66-4d02-9848-9f38dc334267}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\GuiScreen">
+      <UniqueIdentifier>{0c8eea98-c8db-45d4-b976-3f93a7c39672}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\MovementInput">
+      <UniqueIdentifier>{7b197aa1-6e3a-45cb-8406-769820486559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\IChatComponent">
+      <UniqueIdentifier>{ddc13d71-baec-4823-8e3c-15a8ac16ce9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Hooks">
+      <UniqueIdentifier>{be8a6d05-7119-4520-a94d-181afc6b2640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Hooks\Render">
+      <UniqueIdentifier>{ebb0bb6d-f09b-4ce7-bd27-a37275c1feef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Libraries">
+      <UniqueIdentifier>{dda8606c-b9d4-46fb-9e24-b7ab09e26ef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Libraries\MinHook">
+      <UniqueIdentifier>{cde542e0-3d7c-42c2-9f22-3c0bf13c2c2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Libraries\MinHook\hde">
+      <UniqueIdentifier>{b6652bf6-714b-436d-909d-5ea4bdbd27be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Libraries\ImGui">
+      <UniqueIdentifier>{a601e568-f5ae-4c52-82e1-6dc785ca78a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\RenderManager">
+      <UniqueIdentifier>{4e802781-b68e-4475-adf5-efb39823645b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\ActiveRenderInfo">
+      <UniqueIdentifier>{3b752e0f-87ee-431d-b3c3-c90d71c1c7a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Visuals">
+      <UniqueIdentifier>{9110efaf-ffb6-4827-9a8e-3d5cc91ba9df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\vec4">
+      <UniqueIdentifier>{f6c3902f-f52d-4ae6-9d63-caceee702532}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\vec2">
+      <UniqueIdentifier>{558a5e04-f86b-4eca-85ae-c5118cb7d96d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Container">
+      <UniqueIdentifier>{1530a1d1-2eac-4c68-9457-7105b9cf6bb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Inventory">
+      <UniqueIdentifier>{c4be3ca3-8074-4ac1-abff-184c6a2c25bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\PacketSystem">
+      <UniqueIdentifier>{d9ae0495-8ac5-4a2d-8e04-956caf5495e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\PacketSystem\NetHandlerPlayClient">
+      <UniqueIdentifier>{fc2ef634-2707-40ca-bb46-66b95fe31b78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Visuals\ArrayList">
+      <UniqueIdentifier>{a631015b-15b2-437b-a8a7-0a1ed41fa0a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\GUI">
+      <UniqueIdentifier>{6869e91f-0764-444a-84e0-b11eaac8e8fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Enums">
+      <UniqueIdentifier>{0c6ed749-936f-4909-ba3a-9fff5aa38baf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Enums\AntiBotEnum">
+      <UniqueIdentifier>{38d1ba7a-81e9-4730-921b-1367cd92d320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Combat">
+      <UniqueIdentifier>{e819c1cc-4971-4b96-8a78-52c2bd8471ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Combat\Aim">
+      <UniqueIdentifier>{43b57bf4-5de0-41a8-87ad-e530ba1e83c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Combat\Autoclicker">
+      <UniqueIdentifier>{c329076a-2275-4692-b000-0ae7bfb4896b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Combat\KillAura">
+      <UniqueIdentifier>{8f864158-13a5-4f6e-b9cf-97fa2d947c87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Combat\Reach">
+      <UniqueIdentifier>{1db8b98d-fbef-42ef-9e49-6b76388bc849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Combat\Velocity">
+      <UniqueIdentifier>{82d11a32-ed52-47be-a496-33308fa903a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Movement">
+      <UniqueIdentifier>{22241aee-32ce-47d3-920b-3af28f74597d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Movement\Flight">
+      <UniqueIdentifier>{1ed550e5-6fc0-451c-a1d1-bc9948b39de8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Movement\Speed">
+      <UniqueIdentifier>{c3a97eae-dd40-407b-9824-35045f7ccd99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Player">
+      <UniqueIdentifier>{26a86fc4-5764-4829-839c-ad4dc6140acf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Player\ChestStealer">
+      <UniqueIdentifier>{d4717c18-0c6d-45d6-aff5-ba9221194faa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Player\AntiBot">
+      <UniqueIdentifier>{a3b9936c-7505-4b5b-b981-179c68a57dc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Movement\BridgeAssist">
+      <UniqueIdentifier>{8d28e499-ed16-4b78-bf13-aacd0c14138b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Player\FastMine">
+      <UniqueIdentifier>{85e3a249-36f6-422a-9976-9733aab06490}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Player\FastPlace">
+      <UniqueIdentifier>{f4394001-4ec9-4f06-9158-81f7c535da21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Player\NoFall">
+      <UniqueIdentifier>{3625a1a0-73fc-4198-8e77-4a6751ff1449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Misc">
+      <UniqueIdentifier>{c63cea7c-7ed7-4d1d-adb4-5d2db74ffe34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Movement\SafeWalk">
+      <UniqueIdentifier>{6748aca6-f4fb-4fd7-b758-2e474afeffd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Misc\Timer">
+      <UniqueIdentifier>{2b86714e-e0ad-4cc3-8895-f463d2ca153a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Misc\HitDelayFix">
+      <UniqueIdentifier>{726538d8-88c7-4125-aa40-33e84b7e9534}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\FontRenderer">
+      <UniqueIdentifier>{34f844c0-c3e1-4ec1-b9dc-f85e3d28464d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Enums\VelocityEnum">
+      <UniqueIdentifier>{9031d7c4-af2e-4675-9f76-6b79483f9342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Tesellator">
+      <UniqueIdentifier>{b477fa84-cee2-413b-8799-277b5b84316b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\WorldRenderer">
+      <UniqueIdentifier>{56415116-c9d6-4048-beea-9ca022655a32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Movement\Sprint">
+      <UniqueIdentifier>{abe56fc0-5962-46b8-a2fc-16178a1626a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Player\AutoTool">
+      <UniqueIdentifier>{b9a5b27a-08c3-4e8a-8c3c-8a18e3a0de60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\MovingObjectPosition">
+      <UniqueIdentifier>{6a338fdc-7b0c-4164-a745-6ed0e33b47ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Helpers">
+      <UniqueIdentifier>{00a29b5d-8a3e-424e-b919-132f2559491a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Icons">
+      <UniqueIdentifier>{da8873d1-19d7-4746-9b8b-a7bfdf2c64ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Player\AutoArmor">
+      <UniqueIdentifier>{3e2970a1-6915-4508-83fa-481c6ca24c99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Enums\TargetEnum">
+      <UniqueIdentifier>{a1a63367-558f-44a5-b574-7885c8fda5f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\AutoSDK">
+      <UniqueIdentifier>{ed240fa4-7bfb-456a-8b95-53db828032a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Combat\Misplace">
+      <UniqueIdentifier>{f33f1e97-69f3-4ff8-aa50-bc3cdb9869ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Movement\FastStop">
+      <UniqueIdentifier>{94bda620-14ae-4316-8012-bdff9f36de60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Combat\Criticals">
+      <UniqueIdentifier>{61cacbb8-ba18-4fb7-b679-f3626ad04635}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\ItemRenderer">
+      <UniqueIdentifier>{5a5c624e-772c-4085-8600-1e053176c808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Potion">
+      <UniqueIdentifier>{277b732a-6dd4-44f6-8cfc-815de30f7fb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\PotionEffect">
+      <UniqueIdentifier>{4a8e3017-5498-4847-95f0-8cbffad05058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Misc\FakeLag">
+      <UniqueIdentifier>{909ca12e-f542-40e2-9cec-f69e5f885919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\ScaledResolution">
+      <UniqueIdentifier>{aaa74283-3082-4020-95ef-c272806ad974}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\RenderGlobal">
+      <UniqueIdentifier>{ecab2481-d4ec-48f4-823d-ed8a65d75fb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Misc\MCF">
+      <UniqueIdentifier>{75d3523f-f98b-4786-92d6-d40b8b1ca018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\FriendList">
+      <UniqueIdentifier>{629093c6-323e-4f9f-b244-fcbfef4f8cf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\EntityRenderer">
+      <UniqueIdentifier>{1ccf9743-1a18-4f7b-924b-1d42c5e1b16f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\Enums\TeamsEnum">
+      <UniqueIdentifier>{27007821-2e0d-401d-8d41-dc383ec59668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Misc\SumoBorder">
+      <UniqueIdentifier>{221ce4ce-2658-4488-86ff-0eeb4ac90da4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Helpers\Teams">
+      <UniqueIdentifier>{31c59520-48cd-49d6-b729-5189f9234f87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\KeyBinding">
+      <UniqueIdentifier>{1809781e-0573-4eda-ac3e-d559b5ca62e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\NetworkPlayerInfo">
+      <UniqueIdentifier>{b6f5b74c-9bfa-471a-923a-2e7d8120a643}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Unload">
+      <UniqueIdentifier>{bac68af1-8fba-4bc9-a27d-3d984796bb5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\SDK\PlayerModel">
+      <UniqueIdentifier>{d4c0bbe8-73e1-41e6-9b64-5cbb0683de03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Protection">
+      <UniqueIdentifier>{0fea0aae-c733-458f-aa5a-57e780b67c5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Code\Cheats\Visuals\Chams">
+      <UniqueIdentifier>{811fcc69-0213-406c-bdb1-da24efbc9425}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Code</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Code</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>Source Code\SDK</Filter>
+    </ClCompile>
+    <ClCompile Include="AimAssist.cpp">
+      <Filter>Source Code\Cheats\Combat\Aim</Filter>
+    </ClCompile>
+    <ClCompile Include="hits.cpp">
+      <Filter>Source Code\Cheats\Misc\HitDelayFix</Filter>
+    </ClCompile>
+    <ClCompile Include="AxisAlignedBB.cpp">
+      <Filter>Source Code\SDK\AxisAlignedBB</Filter>
+    </ClCompile>
+    <ClCompile Include="Reach.cpp">
+      <Filter>Source Code\Cheats\Combat\Reach</Filter>
+    </ClCompile>
+    <ClCompile Include="clicker.cpp">
+      <Filter>Source Code\Cheats\Combat\Autoclicker</Filter>
+    </ClCompile>
+    <ClCompile Include="FastPlace.cpp">
+      <Filter>Source Code\Cheats\Player\FastPlace</Filter>
+    </ClCompile>
+    <ClCompile Include="Velocity.cpp">
+      <Filter>Source Code\Cheats\Combat\Velocity</Filter>
+    </ClCompile>
+    <ClCompile Include="Killaura.cpp">
+      <Filter>Source Code\Cheats\Combat\KillAura</Filter>
+    </ClCompile>
+    <ClCompile Include="m_timer.cpp">
+      <Filter>Source Code\Cheats\Misc\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Speed.cpp">
+      <Filter>Source Code\Cheats\Movement\Speed</Filter>
+    </ClCompile>
+    <ClCompile Include="FastMine.cpp">
+      <Filter>Source Code\Cheats\Player\FastMine</Filter>
+    </ClCompile>
+    <ClCompile Include="BridgeAssist.cpp">
+      <Filter>Source Code\Cheats\Movement\BridgeAssist</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockPos.cpp">
+      <Filter>Source Code\SDK\BlockPos</Filter>
+    </ClCompile>
+    <ClCompile Include="Flight.cpp">
+      <Filter>Source Code\Cheats\Movement\Flight</Filter>
+    </ClCompile>
+    <ClCompile Include="open_process.cpp">
+      <Filter>Source Code\Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="c_glrender.cpp">
+      <Filter>Source Code\Hooks\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="open_gl.cpp">
+      <Filter>Source Code\Hooks\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\Minhook\buffer.c">
+      <Filter>Source Code\SDK\Libraries\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\Minhook\hook.c">
+      <Filter>Source Code\SDK\Libraries\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\Minhook\trampoline.c">
+      <Filter>Source Code\SDK\Libraries\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\Minhook\hde\hde32.c">
+      <Filter>Source Code\SDK\Libraries\MinHook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\Minhook\hde\hde64.c">
+      <Filter>Source Code\SDK\Libraries\MinHook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui\imgui.cpp">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui\imgui_draw.cpp">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui\imgui_impl_opengl2.cpp">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui\imgui_impl_win32.cpp">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui\imgui_widgets.cpp">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerESP.cpp">
+      <Filter>Source Code\Cheats\Visuals</Filter>
+    </ClCompile>
+    <ClCompile Include="ChestStealer.cpp">
+      <Filter>Source Code\Cheats\Player\ChestStealer</Filter>
+    </ClCompile>
+    <ClCompile Include="NoFall.cpp">
+      <Filter>Source Code\Cheats\Player\NoFall</Filter>
+    </ClCompile>
+    <ClCompile Include="SafeWalk.cpp">
+      <Filter>Source Code\Cheats\Movement\SafeWalk</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayList.cpp">
+      <Filter>Source Code\Cheats\Visuals\ArrayList</Filter>
+    </ClCompile>
+    <ClCompile Include="AntiBot.cpp">
+      <Filter>Source Code\Cheats\Player\AntiBot</Filter>
+    </ClCompile>
+    <ClCompile Include="Tesellator.hpp">
+      <Filter>Source Code\SDK\Tesellator</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprint.cpp">
+      <Filter>Source Code\Cheats\Movement\Sprint</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoTool.cpp">
+      <Filter>Source Code\Cheats\Player\AutoTool</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoArmor.cpp">
+      <Filter>Source Code\Cheats\Player\AutoArmor</Filter>
+    </ClCompile>
+    <ClCompile Include="FastStop.cpp">
+      <Filter>Source Code\Cheats\Movement\FastStop</Filter>
+    </ClCompile>
+    <ClCompile Include="Criticals.cpp">
+      <Filter>Source Code\Cheats\Combat\Criticals</Filter>
+    </ClCompile>
+    <ClCompile Include="MCF.cpp">
+      <Filter>Source Code\Cheats\Misc\MCF</Filter>
+    </ClCompile>
+    <ClCompile Include="SumoBorder.cpp">
+      <Filter>Source Code\Cheats\Misc\SumoBorder</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyBinds.cpp">
+      <Filter>Source Code\SDK\KeyBinding</Filter>
+    </ClCompile>
+    <ClCompile Include="TeamsHelper.cpp">
+      <Filter>Source Code\Helpers\Teams</Filter>
+    </ClCompile>
+    <ClCompile Include="main_hook.hpp">
+      <Filter>Source Code\Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiScreen.cpp">
+      <Filter>Source Code\SDK\GuiScreen</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui\misc\freetype\imgui_freetype.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.hpp">
+      <Filter>Source Code</Filter>
+    </ClInclude>
+    <ClInclude Include="global.hpp">
+      <Filter>Source Code</Filter>
+    </ClInclude>
+    <ClInclude Include="functions.hpp">
+      <Filter>Source Code\Minecraft</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.hpp">
+      <Filter>Source Code\SDK\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Minecraft.hpp">
+      <Filter>Source Code\SDK\Minecraft</Filter>
+    </ClInclude>
+    <ClInclude Include="World.hpp">
+      <Filter>Source Code\SDK\World</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3.hpp">
+      <Filter>Source Code\SDK\vec3</Filter>
+    </ClInclude>
+    <ClInclude Include="c_context.hpp">
+      <Filter>Source Code\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.hpp">
+      <Filter>Source Code\SDK</Filter>
+    </ClInclude>
+    <ClInclude Include="AimAssist.hpp">
+      <Filter>Source Code\Cheats\Combat\Aim</Filter>
+    </ClInclude>
+    <ClInclude Include="hits.hpp">
+      <Filter>Source Code\Cheats\Misc\HitDelayFix</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.hpp">
+      <Filter>Source Code</Filter>
+    </ClInclude>
+    <ClInclude Include="player_utils.hpp">
+      <Filter>Source Code\SDK\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="AxisAlignedBB.hpp">
+      <Filter>Source Code\SDK\AxisAlignedBB</Filter>
+    </ClInclude>
+    <ClInclude Include="Reach.hpp">
+      <Filter>Source Code\Cheats\Combat\Reach</Filter>
+    </ClInclude>
+    <ClInclude Include="clicker.hpp">
+      <Filter>Source Code\Cheats\Combat\Autoclicker</Filter>
+    </ClInclude>
+    <ClInclude Include="FastPlace.hpp">
+      <Filter>Source Code\Cheats\Player\FastPlace</Filter>
+    </ClInclude>
+    <ClInclude Include="Velocity.hpp">
+      <Filter>Source Code\Cheats\Combat\Velocity</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemStack.hpp">
+      <Filter>Source Code\SDK\ItemStack</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.hpp">
+      <Filter>Source Code\SDK\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Killaura.hpp">
+      <Filter>Source Code\Cheats\Combat\KillAura</Filter>
+    </ClInclude>
+    <ClInclude Include="SelfDestruct.hpp">
+      <Filter>Source Code\Cheats\SelfDestruct</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Source Code\SDK\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="m_timer.hpp">
+      <Filter>Source Code\Cheats\Misc\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Speed.hpp">
+      <Filter>Source Code\Cheats\Movement\Speed</Filter>
+    </ClInclude>
+    <ClInclude Include="FastMine.hpp">
+      <Filter>Source Code\Cheats\Player\FastMine</Filter>
+    </ClInclude>
+    <ClInclude Include="BridgeAssist.hpp">
+      <Filter>Source Code\Cheats\Movement\BridgeAssist</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockPos.hpp">
+      <Filter>Source Code\SDK\BlockPos</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSettings.hpp">
+      <Filter>Source Code\SDK\GameSettings</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyBinding.hpp">
+      <Filter>Source Code\SDK\GameSettings</Filter>
+    </ClInclude>
+    <ClInclude Include="Flight.hpp">
+      <Filter>Source Code\Cheats\Movement\Flight</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiScreen.hpp">
+      <Filter>Source Code\SDK\GuiScreen</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementInput.hpp">
+      <Filter>Source Code\SDK\MovementInput</Filter>
+    </ClInclude>
+    <ClInclude Include="IChatComponent.hpp">
+      <Filter>Source Code\SDK\IChatComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="c_glrender.hpp">
+      <Filter>Source Code\Hooks\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="c_gltext.cpp">
+      <Filter>Source Code\Hooks\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="c_gltext.hpp">
+      <Filter>Source Code\Hooks\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\Minhook\buffer.h">
+      <Filter>Source Code\SDK\Libraries\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\Minhook\MinHook.h">
+      <Filter>Source Code\SDK\Libraries\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\Minhook\trampoline.h">
+      <Filter>Source Code\SDK\Libraries\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\Minhook\hde\hde32.h">
+      <Filter>Source Code\SDK\Libraries\MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\Minhook\hde\hde64.h">
+      <Filter>Source Code\SDK\Libraries\MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\Minhook\hde\pstdint.h">
+      <Filter>Source Code\SDK\Libraries\MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\Minhook\hde\table32.h">
+      <Filter>Source Code\SDK\Libraries\MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\Minhook\hde\table64.h">
+      <Filter>Source Code\SDK\Libraries\MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imstb_truetype.h">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imgui.h">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imgui_impl_opengl2.h">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imgui_impl_win32.h">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imgui_internal.h">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imstb_rectpack.h">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imstb_textedit.h">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\imconfig.h">
+      <Filter>Source Code\SDK\Libraries\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.hpp">
+      <Filter>Source Code\SDK\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderManager.hpp">
+      <Filter>Source Code\SDK\RenderManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ActiveRenderInfo.hpp">
+      <Filter>Source Code\SDK\ActiveRenderInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerESP.hpp">
+      <Filter>Source Code\Cheats\Visuals</Filter>
+    </ClInclude>
+    <ClInclude Include="vec4.hpp">
+      <Filter>Source Code\SDK\vec4</Filter>
+    </ClInclude>
+    <ClInclude Include="vec2.hpp">
+      <Filter>Source Code\SDK\vec2</Filter>
+    </ClInclude>
+    <ClInclude Include="ChestStealer.hpp">
+      <Filter>Source Code\Cheats\Player\ChestStealer</Filter>
+    </ClInclude>
+    <ClInclude Include="Container.hpp">
+      <Filter>Source Code\SDK\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="IInventory.hpp">
+      <Filter>Source Code\SDK\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="NetHandlerPlayClient.hpp">
+      <Filter>Source Code\SDK\PacketSystem\NetHandlerPlayClient</Filter>
+    </ClInclude>
+    <ClInclude Include="Packet.hpp">
+      <Filter>Source Code\SDK\PacketSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="NoFall.hpp">
+      <Filter>Source Code\Cheats\Player\NoFall</Filter>
+    </ClInclude>
+    <ClInclude Include="SafeWalk.hpp">
+      <Filter>Source Code\Cheats\Movement\SafeWalk</Filter>
+    </ClInclude>
+    <ClInclude Include="ArrayList.hpp">
+      <Filter>Source Code\Cheats\Visuals\ArrayList</Filter>
+    </ClInclude>
+    <ClInclude Include="c_gui.hpp">
+      <Filter>Source Code\SDK\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="AntiBot.hpp">
+      <Filter>Source Code\Cheats\Player\AntiBot</Filter>
+    </ClInclude>
+    <ClInclude Include="AntiBotEnum.hpp">
+      <Filter>Source Code\SDK\Enums\AntiBotEnum</Filter>
+    </ClInclude>
+    <ClInclude Include="FontRenderer.hpp">
+      <Filter>Source Code\SDK\FontRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="VelocityEnum.hpp">
+      <Filter>Source Code\SDK\Enums\VelocityEnum</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldRenderer.hpp">
+      <Filter>Source Code\SDK\WorldRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprint.hpp">
+      <Filter>Source Code\Cheats\Movement\Sprint</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoTool.hpp">
+      <Filter>Source Code\Cheats\Player\AutoTool</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingObjectPosition.hpp">
+      <Filter>Source Code\SDK\MovingObjectPosition</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules.hpp">
+      <Filter>Source Code\Cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths.hpp">
+      <Filter>Source Code\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Icons.hpp">
+      <Filter>Source Code\Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="IconHelper.hpp">
+      <Filter>Source Code\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Source Code\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.hpp">
+      <Filter>Source Code\Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="Gui.hpp">
+      <Filter>Source Code\Hooks\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoArmor.hpp">
+      <Filter>Source Code\Cheats\Player\AutoArmor</Filter>
+    </ClInclude>
+    <ClInclude Include="TargetEnum.hpp">
+      <Filter>Source Code\SDK\Enums\TargetEnum</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoSDK.hpp">
+      <Filter>Source Code\AutoSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="config.hpp">
+      <Filter>Source Code\Hooks\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="FastStop.hpp">
+      <Filter>Source Code\Cheats\Movement\FastStop</Filter>
+    </ClInclude>
+    <ClInclude Include="Criticals.hpp">
+      <Filter>Source Code\Cheats\Combat\Criticals</Filter>
+    </ClInclude>
+    <ClInclude Include="c_notification.hpp">
+      <Filter>Source Code\Hooks\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemRenderer.hpp">
+      <Filter>Source Code\SDK\ItemRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Potion.hpp">
+      <Filter>Source Code\SDK\Potion</Filter>
+    </ClInclude>
+    <ClInclude Include="PotionEffect.hpp">
+      <Filter>Source Code\SDK\PotionEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="SwapLayerBuffers.hpp">
+      <Filter>Source Code\Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="FakeLag.hpp">
+      <Filter>Source Code\Cheats\Misc\FakeLag</Filter>
+    </ClInclude>
+    <ClInclude Include="ScaledResolution.hpp">
+      <Filter>Source Code\SDK\ScaledResolution</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderGlobal.hpp">
+      <Filter>Source Code\SDK\RenderGlobal</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Source Code\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="MCF.hpp">
+      <Filter>Source Code\Cheats\Misc\MCF</Filter>
+    </ClInclude>
+    <ClInclude Include="FriendList.hpp">
+      <Filter>Source Code\FriendList</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityRenderer.hpp">
+      <Filter>Source Code\SDK\EntityRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="TeamMode.hpp">
+      <Filter>Source Code\SDK\Enums\TeamsEnum</Filter>
+    </ClInclude>
+    <ClInclude Include="SumoBorder.hpp">
+      <Filter>Source Code\Cheats\Misc\SumoBorder</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyBinds.hpp">
+      <Filter>Source Code\SDK\KeyBinding</Filter>
+    </ClInclude>
+    <ClInclude Include="TeamsHelper.hpp">
+      <Filter>Source Code\Helpers\Teams</Filter>
+    </ClInclude>
+    <ClInclude Include="winsock.hpp">
+      <Filter>Source Code\Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="Mapper.hpp">
+      <Filter>Source Code\AutoSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes.hpp">
+      <Filter>Source Code\AutoSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="jvmutil.hpp">
+      <Filter>Source Code\AutoSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="field_t.hpp">
+      <Filter>Source Code\AutoSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="method_t.hpp">
+      <Filter>Source Code\AutoSDK</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkPlayerInfo.h">
+      <Filter>Source Code\SDK\NetworkPlayerInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="unload.h">
+      <Filter>Source Code\Unload</Filter>
+    </ClInclude>
+    <ClInclude Include="Icons.h">
+      <Filter>Source Code</Filter>
+    </ClInclude>
+    <ClInclude Include="c_playermodel.h">
+      <Filter>Source Code\SDK\PlayerModel</Filter>
+    </ClInclude>
+    <ClInclude Include="Encryption.h">
+      <Filter>Source Code\Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="Chams.hpp">
+      <Filter>Source Code\Cheats\Visuals\Chams</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui\misc\freetype\imgui_freetype.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="unload.asm">
+      <Filter>Source Code\Unload</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{3ebb1b74-1008-4544-ac15-000f427cc97c}</ProjectGuid>
+    <RootNamespace>eternalinternal</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;ETERNALINTERNAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;ETERNALINTERNAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;NDEBUG;ETERNALINTERNAL_EXPORTS;_WINDOWS;_USRDLL;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Program Files\Java\jdk-16.0.1\include;C:\Program Files\Java\jdk-16.0.1\include\win32;C:\Users\Gebruiker.EGON\source\repos\eternal_internal\eternal_internal\Libs\glfw\include;C:\Users\Gebruiker.EGON\source\repos\eternal_internal\eternal_internal\Libs\GLM\include;C:\Users\Gebruiker.EGON\Downloads\freetype-master\freetype-master\include</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>C:\Users\Gebruiker.EGON\source\repos\eternal_internal\eternal_internal\Libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;C:\Users\Gebruiker.EGON\Downloads\freetype-master\freetype-master\objs\x64\Release\freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32_LEAN_AND_MEAN;NOMINMAX;NDEBUG;ETERNALINTERNAL_EXPORTS;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Program Files\Java\jdk-16.0.1\include;C:\Program Files\Java\jdk-16.0.1\include\win32;C:\Users\Gebruiker.EGON\source\repos\eternal_internal\eternal_internal\Libs\glfw\include;C:\Users\Gebruiker.EGON\source\repos\eternal_internal\eternal_internal\Libs\GLM\include;C:\Users\Gebruiker.EGON\Downloads\freetype-master\freetype-master\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;C:\Users\Gebruiker.EGON\Downloads\freetype-master\freetype-master\objs\x64\Release\freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Gebruiker.EGON\source\repos\eternal_internal\eternal_internal\Libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AimAssist.cpp" />
+    <ClCompile Include="AntiBot.cpp" />
+    <ClCompile Include="ArrayList.cpp" />
+    <ClCompile Include="AutoArmor.cpp" />
+    <ClCompile Include="AutoTool.cpp" />
+    <ClCompile Include="AxisAlignedBB.cpp" />
+    <ClCompile Include="BlockPos.cpp" />
+    <ClCompile Include="ChestStealer.cpp" />
+    <ClCompile Include="clicker.cpp" />
+    <ClCompile Include="Criticals.cpp" />
+    <ClCompile Include="c_glrender.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="FastMine.cpp" />
+    <ClCompile Include="FastPlace.cpp" />
+    <ClCompile Include="FastStop.cpp" />
+    <ClCompile Include="Flight.cpp" />
+    <ClCompile Include="GuiScreen.cpp" />
+    <ClCompile Include="hits.cpp" />
+    <ClCompile Include="KeyBinds.cpp" />
+    <ClCompile Include="Killaura.cpp" />
+    <ClCompile Include="Libs\imgui\imgui.cpp" />
+    <ClCompile Include="Libs\imgui\imgui_draw.cpp" />
+    <ClCompile Include="Libs\imgui\imgui_impl_opengl2.cpp" />
+    <ClCompile Include="Libs\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="Libs\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Libs\imgui\misc\freetype\imgui_freetype.cpp" />
+    <ClCompile Include="Libs\Minhook\buffer.c" />
+    <ClCompile Include="Libs\Minhook\hde\hde32.c" />
+    <ClCompile Include="Libs\Minhook\hde\hde64.c" />
+    <ClCompile Include="Libs\Minhook\hook.c" />
+    <ClCompile Include="Libs\Minhook\trampoline.c" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="main_hook.hpp" />
+    <ClCompile Include="MCF.cpp" />
+    <ClCompile Include="m_timer.cpp" />
+    <ClCompile Include="NoFall.cpp" />
+    <ClCompile Include="open_gl.cpp" />
+    <ClCompile Include="open_process.cpp" />
+    <ClCompile Include="PlayerESP.cpp" />
+    <ClCompile Include="Reach.cpp" />
+    <ClCompile Include="BridgeAssist.cpp" />
+    <ClCompile Include="SafeWalk.cpp" />
+    <ClCompile Include="Speed.cpp" />
+    <ClCompile Include="Sprint.cpp" />
+    <ClCompile Include="SumoBorder.cpp" />
+    <ClCompile Include="TeamsHelper.cpp" />
+    <ClCompile Include="Tesellator.hpp" />
+    <ClCompile Include="timer.cpp" />
+    <ClCompile Include="Velocity.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActiveRenderInfo.hpp" />
+    <ClInclude Include="AimAssist.hpp" />
+    <ClInclude Include="AutoSDK.hpp" />
+    <ClInclude Include="Chams.hpp" />
+    <ClInclude Include="Classes.hpp" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="config.hpp" />
+    <ClInclude Include="Criticals.hpp" />
+    <ClInclude Include="c_notification.hpp" />
+    <ClInclude Include="c_playermodel.h" />
+    <ClInclude Include="Encryption.h" />
+    <ClInclude Include="EntityRenderer.hpp" />
+    <ClInclude Include="FakeLag.hpp" />
+    <ClInclude Include="FastStop.hpp" />
+    <ClInclude Include="field_t.hpp" />
+    <ClInclude Include="FriendList.hpp" />
+    <ClInclude Include="Icons.h" />
+    <ClInclude Include="ItemRenderer.hpp" />
+    <ClInclude Include="jvmutil.hpp" />
+    <ClInclude Include="KeyBinds.hpp" />
+    <ClInclude Include="Libs\imgui\misc\freetype\imgui_freetype.h" />
+    <ClInclude Include="Mapper.hpp" />
+    <ClInclude Include="MCF.hpp" />
+    <ClInclude Include="method_t.hpp" />
+    <ClInclude Include="NetworkPlayerInfo.h" />
+    <ClInclude Include="Potion.hpp" />
+    <ClInclude Include="PotionEffect.hpp" />
+    <ClInclude Include="RenderGlobal.hpp" />
+    <ClInclude Include="ScaledResolution.hpp" />
+    <ClInclude Include="SumoBorder.hpp" />
+    <ClInclude Include="SwapLayerBuffers.hpp" />
+    <ClInclude Include="TargetEnum.hpp" />
+    <ClInclude Include="AntiBot.hpp" />
+    <ClInclude Include="AntiBotEnum.hpp" />
+    <ClInclude Include="ArrayList.hpp" />
+    <ClInclude Include="AutoArmor.hpp" />
+    <ClInclude Include="AutoTool.hpp" />
+    <ClInclude Include="AxisAlignedBB.hpp" />
+    <ClInclude Include="BlockPos.hpp" />
+    <ClInclude Include="ChestStealer.hpp" />
+    <ClInclude Include="clicker.hpp" />
+    <ClInclude Include="Container.hpp" />
+    <ClInclude Include="c_context.hpp" />
+    <ClInclude Include="c_glrender.hpp" />
+    <ClInclude Include="c_gltext.cpp" />
+    <ClInclude Include="c_gltext.hpp" />
+    <ClInclude Include="c_gui.hpp" />
+    <ClInclude Include="FastMine.hpp" />
+    <ClInclude Include="FastPlace.hpp" />
+    <ClInclude Include="Flight.hpp" />
+    <ClInclude Include="Font.hpp" />
+    <ClInclude Include="FontRenderer.hpp" />
+    <ClInclude Include="functions.hpp" />
+    <ClInclude Include="GameSettings.hpp" />
+    <ClInclude Include="global.hpp" />
+    <ClInclude Include="Gui.hpp" />
+    <ClInclude Include="GuiScreen.hpp" />
+    <ClInclude Include="hits.hpp" />
+    <ClInclude Include="Block.hpp" />
+    <ClInclude Include="IChatComponent.hpp" />
+    <ClInclude Include="IconHelper.hpp" />
+    <ClInclude Include="Icons.hpp" />
+    <ClInclude Include="IInventory.hpp" />
+    <ClInclude Include="Item.hpp" />
+    <ClInclude Include="ItemStack.hpp" />
+    <ClInclude Include="KeyBinding.hpp" />
+    <ClInclude Include="Killaura.hpp" />
+    <ClInclude Include="Libs\imgui\imconfig.h" />
+    <ClInclude Include="Libs\imgui\imgui.h" />
+    <ClInclude Include="Libs\imgui\imgui_impl_opengl2.h" />
+    <ClInclude Include="Libs\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Libs\imgui\imgui_internal.h" />
+    <ClInclude Include="Libs\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Libs\imgui\imstb_textedit.h" />
+    <ClInclude Include="Libs\imgui\imstb_truetype.h" />
+    <ClInclude Include="Libs\Minhook\buffer.h" />
+    <ClInclude Include="Libs\Minhook\hde\hde32.h" />
+    <ClInclude Include="Libs\Minhook\hde\hde64.h" />
+    <ClInclude Include="Libs\Minhook\hde\pstdint.h" />
+    <ClInclude Include="Libs\Minhook\hde\table32.h" />
+    <ClInclude Include="Libs\Minhook\hde\table64.h" />
+    <ClInclude Include="Libs\Minhook\MinHook.h" />
+    <ClInclude Include="Libs\Minhook\trampoline.h" />
+    <ClInclude Include="main.hpp" />
+    <ClInclude Include="Maths.hpp" />
+    <ClInclude Include="Minecraft.hpp" />
+    <ClInclude Include="Modules.hpp" />
+    <ClInclude Include="MovementInput.hpp" />
+    <ClInclude Include="MovingObjectPosition.hpp" />
+    <ClInclude Include="m_timer.hpp" />
+    <ClInclude Include="NetHandlerPlayClient.hpp" />
+    <ClInclude Include="NoFall.hpp" />
+    <ClInclude Include="Packet.hpp" />
+    <ClInclude Include="Player.hpp" />
+    <ClInclude Include="PlayerESP.hpp" />
+    <ClInclude Include="player_utils.hpp" />
+    <ClInclude Include="Reach.hpp" />
+    <ClInclude Include="BridgeAssist.hpp" />
+    <ClInclude Include="RenderManager.hpp" />
+    <ClInclude Include="SafeWalk.hpp" />
+    <ClInclude Include="SelfDestruct.hpp" />
+    <ClInclude Include="Speed.hpp" />
+    <ClInclude Include="Sprint.hpp" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="TeamMode.hpp" />
+    <ClInclude Include="TeamsHelper.hpp" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="timer.hpp" />
+    <ClInclude Include="unload.h" />
+    <ClInclude Include="utils.hpp" />
+    <ClInclude Include="vec2.hpp" />
+    <ClInclude Include="vec3.hpp" />
+    <ClInclude Include="vec4.hpp" />
+    <ClInclude Include="Velocity.hpp" />
+    <ClInclude Include="VelocityEnum.hpp" />
+    <ClInclude Include="winsock.hpp" />
+    <ClInclude Include="World.hpp" />
+    <ClInclude Include="WorldRenderer.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="unload.asm">
+      <FileType>Document</FileType>
+    </MASM>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>

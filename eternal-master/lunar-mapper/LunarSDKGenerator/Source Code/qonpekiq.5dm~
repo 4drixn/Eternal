@@ -1,0 +1,417 @@
+#include <cstdio>
+#include <Windows.h>
+#include <utility>
+#include <algorithm>
+#include "jvm/jvm.hpp"
+#include "Mapper/Mapper.hpp"
+#include "SDK/EntityLivingBase/EntityLivingBase.hpp"
+#include "SDK/FontRenderer/FontRenderer.hpp"
+#include "SDK/Minecraft/Minecraft.h"
+#include "SDK/NetHandlerPlayClient/NetHandlerPlayClient.hpp"
+#include "SDK/PlayerControllerMP/PlayerControllerMP.hpp"
+#include "SDK/ScaledResolution/ScaledResolution.hpp"
+#include "SDK/World/World.hpp"
+#include "utils/utilities.hpp"
+
+HMODULE h_mod;
+
+void __stdcall dump()
+{
+	Minecraft Minecraft = cheat_main::get().mapper()->findClass(209, 102);
+	
+	jclass BlockPos = cheat_main::get().mapper()->findClass(30, 9);
+	
+	FontRenderer fontRenderer = cheat_main::get().mapper()->findClass(53, 38);
+
+	jclass Entity = cheat_main::get().mapper()->findClass(235, 75, true,
+		search_options_t
+	{
+	{},
+	{ {"I", 16} }
+	});
+	
+	ScaledResolution ScaledResolution = cheat_main::get().mapper()->findClass(6, 5, true,
+		search_options_t
+	{
+		{},
+		{ {"D", 2}, {"I", 3} }
+	});
+
+	jclass WorldClient = cheat_main::get().mapper()->findClass(35, 7, false, 
+		search_options_t
+	{
+	{},{  {"Ljava/util/Set;", 2}}
+	});
+
+	jclass Timer = cheat_main::get().mapper()->findClass(5, 10, true, search_options_t{
+	{ {"F", 4}, {"D", 1} }, { {"F", 12} }
+	});
+
+	jclass AxisAlignedBB = cheat_main::get().mapper()->findClass(29, 6, true, search_options_t
+	{
+			{}, { { "D", 6 }}
+	});
+
+	jclass ItemSword = cheat_main::get().mapper()->findClass(14, 2, true, search_options_t
+		{
+			{},
+			{ {"F", 1} }
+		});
+	jclass ItemAxe = cheat_main::get().mapper()->findClass(3, 1, true, search_options_t
+		{
+			{},
+			{ {"Ljava/util/Set;", 1} }
+		});
+	jclass ItemArmor = cheat_main::get().mapper()->findClass(16, 7, true);
+
+	jclass C03PacketPlayerPosition = cheat_main::get().mapper()->findClass(15, 8, true, search_options_t{
+		{}, { { "D", 3}, {"F", 2}, {"Z", 3} }
+		});
+
+	jclass ItemStack = cheat_main::get().mapper()->findClass(99, 11, true, search_options_t({
+	{}, { {"I", 3}, {"Z", 2}}
+		}));
+
+
+	
+	jclass EntityPlayerSP = cheat_main::get().mapper()->findClass(86, 24, true);
+	jclass EntityPlayer = cheat_main::get().mapper()->findClass(160, 37, true);
+	EntityLivingBase EntityLivingBase = cheat_main::get().mapper()->findClass(157, 57);
+	World World = cheat_main::get().mapper()->findClass(242, 40, true);
+	jclass Item = cheat_main::get().mapper()->findClass(71, 12);
+	PlayerControllerMP PlayerController = cheat_main::get().mapper()->findClass(40, 10, true, search_options_t(
+	{
+		{ }, { {"F", 2}, {"I", 2}, {"Z", 1}}
+	}));
+	
+	jclass Potion = cheat_main::get().mapper()->findClass(29, 42, true);
+	mc_class Block = cheat_main::get().mapper()->findClass(135, 41);
+
+	std::string ItemBlock_sig = jvmutil::getClassName(Block.clazz, true);
+
+	jclass ItemBlock = cheat_main::get().mapper()->findClass(11, 1, true, search_options_t(
+		{
+				{}, { { ItemBlock_sig.c_str(), 1}}
+		}));
+
+	NetHandlerPlayClient NetHandlerPlayClient = cheat_main::get().mapper()->findClass(99, 11, true, search_options_t(
+		{
+			{}, { { "Z", 2}, { "I", 1}}
+		}));
+
+	
+	jclass GameSettings = cheat_main::get().mapper()->findClass(76, 192);
+
+	std::string rendermanager_name = util::get_str_between_two_str(Minecraft.fields[23].sig, "L", ";");
+	std::replace(rendermanager_name.begin(), rendermanager_name.end(), '/', '.');
+
+	mc_class RenderManager = cheat_main::get().mapper()->findClass(rendermanager_name.c_str());
+	
+	printf("Minecraft: %s\n", jvmutil::getClassName(Minecraft.clazz));
+	printf("RenderManager: %s\n", rendermanager_name.c_str());
+	printf("Timer: %s\n", jvmutil::getClassName(Timer));
+	printf("Block: %s\n", jvmutil::getClassName(Block.clazz));
+	printf("BlockPos: %s\n", jvmutil::getClassName(BlockPos));
+	printf("AxisAlignedBB: %s\n", jvmutil::getClassName(AxisAlignedBB));
+	printf("NetHandlerPlayClient: %s\n", jvmutil::getClassName(NetHandlerPlayClient.clazz));
+	printf("FontRenderer: %s\n", jvmutil::getClassName(fontRenderer.clazz));
+	printf("GameSettings: %s\n", jvmutil::getClassName(GameSettings));
+	printf("ScaledResolution: %s\n", jvmutil::getClassName(ScaledResolution.clazz));
+	printf("Item: %s\n", jvmutil::getClassName(Item));
+	printf("ItemStack: %s\n", jvmutil::getClassName(ItemStack));
+	printf("ItemSword: %s\n", jvmutil::getClassName(ItemSword));
+	printf("ItemAxe: %s\n", jvmutil::getClassName(ItemAxe));
+	printf("ItemArmor: %s\n", jvmutil::getClassName(ItemArmor));
+	printf("ItemBlock: %s\n", jvmutil::getClassName(ItemBlock));
+	printf("C03PacketPlayerPosition: %s\n", jvmutil::getClassName(C03PacketPlayerPosition));
+
+	printf("\n");
+	
+	printf("Entity: %s\n", jvmutil::getClassName(Entity));
+	printf("EntityPlayer: %s\n", jvmutil::getClassName(EntityPlayer));
+	printf("EntityPlayerSP: %s\n", jvmutil::getClassName(EntityPlayerSP));
+	printf("EntityLivingBase: %s\n", jvmutil::getClassName(EntityLivingBase.clazz));
+	printf("PlayerControllerMP: %s\n", jvmutil::getClassName(PlayerController.clazz));
+	printf("World: %s\n", jvmutil::getClassName(World.clazz));
+	printf("WorldClient: %s\n", jvmutil::getClassName(WorldClient));
+	printf("Potion: %s\n", jvmutil::getClassName(Potion));
+
+	printf("\n\nMethods:\n");
+	for (method_t method : PlayerController.methods)
+	{
+		std::string name = method.name;
+		std::string signature = method.sig;
+
+		std::string parameters = util::get_str_between_two_str(method.sig, "(", ")");
+		char return_type = signature.back();
+
+		if (return_type == ';')
+			continue;
+
+		std::vector<std::string> vstrings = util::split(parameters, ';');
+
+		if(vstrings.size() == 2)
+		{
+			if (vstrings[0] == jvmutil::getClassName(EntityPlayer, true) && vstrings[1] == jvmutil::getClassName(Entity, true) && return_type == 'V')
+			{
+				std::cout << "Attack Entity: " << name << " : " << signature << std::endl;
+			}
+		}
+		else if (vstrings.size() == 3)
+		{
+			if(return_type == 'Z' && vstrings[0] == jvmutil::getClassName(EntityPlayer, true)  && vstrings[1] == jvmutil::getClassName(World.clazz, true))
+			{
+				std::cout << "SendUseItem: " << name << " : " << signature << std::endl;
+			}
+		}
+		
+	}
+
+	for (method_t method : EntityLivingBase.methods)
+	{
+		std::string name = method.name;
+		std::string signature = method.sig;
+
+		std::string parameters = util::get_str_between_two_str(method.sig, "(", ")");
+		char return_type = signature.back();
+
+		if (return_type == ';')
+			continue;
+		
+		std::vector<std::string> vstrings = util::split(parameters, ';');
+
+		if (vstrings.size() == 1)
+		{
+			if (vstrings[0] == jvmutil::getClassName(EntityLivingBase.clazz, true) && return_type == 'Z')
+			{
+				std::cout << "IsOnSameTeam: " << name << " : " << signature << std::endl;
+			}
+		}
+
+	}
+
+	for (method_t method : World.methods)
+	{
+		std::string name = method.name;
+		std::string signature = method.sig;
+
+		std::string parameters = util::get_str_between_two_str(method.sig, "(", ")");
+		std::string returnvalue = util::get_str_between_two_str(method.sig, ")", ";");
+		char return_type = signature.back();
+
+		std::vector<std::string> vstrings = util::split(parameters, ';');
+
+		if (vstrings.size() == 2)
+		{
+			if(returnvalue == "Ljava/util/List;" && vstrings[0] == jvmutil::getClassName(Entity, true) && vstrings[1] == jvmutil::getClassName(AxisAlignedBB, true))
+			{
+				std::cout << "getCollidingBoundingBoxes: " << name << " : " << signature << std::endl;
+			}
+		}
+
+	}
+
+	for (method_t method : NetHandlerPlayClient.methods)
+	{
+		std::string name = method.name;
+		std::string signature = method.sig;
+
+		std::string parameters = util::get_str_between_two_str(method.sig, "(", ")");
+		char return_type = signature.back();
+
+		std::vector<std::string> vstrings = util::split(parameters, ';');
+
+		if (vstrings.size() == 1)
+		{
+
+			std::string parameter = vstrings[0];
+			std::replace(parameter.begin(), parameter.end(), '/', '.');
+			parameter.erase(0, 1);
+			parameter.erase(parameter.size() - 1);
+			if (vstrings[0] == "Ljava/lang/String;")
+			{
+				std::cout << "getPlayerInfo: " << name << " : " << signature << std::endl;
+			}
+			
+		}
+	}
+
+	for (auto& method : RenderManager.methods)
+	{
+		std::string name = method.name;
+		std::string signature = method.sig;
+
+		std::string parameters = util::get_str_between_two_str(method.sig, "(", ")");
+		char return_type = signature.back();
+
+		std::vector<std::string> vstrings = util::split(parameters, ';');
+
+		if (vstrings.size() == 1)
+		{
+
+			std::string parameter = vstrings[0];
+			std::replace(parameter.begin(), parameter.end(), '/', '.');
+			parameter.erase(0, 1);
+			parameter.erase(parameter.size() - 1);
+			if (vstrings[0] == jvmutil::getClassName(Entity, true) && vstrings.size() == 1 && return_type != 'F')
+			{
+				std::cout << "getEntityRenderObject: " << name << " : " << signature << std::endl;
+			}
+
+		}
+
+		//pppapppeehhspeahahseepsea:(Lnet/minecraft/v1_8/sapespahhseshheshpesheshh;)Lnet/minecraft/v1_8/hpeeappshsphpeeaapsaaspap;
+		
+	}
+	{
+		jclass BlockPos = cheat_main::get().mapper()->findClass(30, 9);
+		std::string cls_name = jvmutil::getClassName(BlockPos, true);
+
+		std::string sig("(" + cls_name + ")Z");
+
+		std::string IBlockState_name = Block.fields[39].sig;
+		
+		mc_class IBlockAccess = cheat_main::get().mapper()->findClass(8, 0, true, { { { sig.c_str(), 1}}, {} });
+		for (auto& method : IBlockAccess.methods)
+		{
+
+			std::string parameters = util::get_str_between_two_str(method.sig, "(", ")");
+
+			std::vector<std::string> vstrings = util::split(parameters, ';');
+
+			std::string signature = method.sig;
+			if(method.sig == sig)
+			{
+				std::cout << "IsAirBlock: " << method.name << " : " << method.sig << std::endl;
+			}
+
+			if(signature.find(IBlockState_name) != std::string::npos)
+			{
+				std::cout << "getBlockState: " << method.name << " : " << method.sig << std::endl;
+			}
+		}
+
+		for(auto& method : Block.methods)
+		{
+			//static Block getBlockById(int id)
+			std::string name = method.name;
+			std::string signature = method.sig;
+
+			std::string parameters = util::get_str_between_two_str(method.sig, "(", ")");
+			char return_type = signature.back();
+
+			std::vector<std::string> vstrings = util::split(parameters, ';');
+
+			if(method.is_static && return_type == 'I' && signature.find(jvmutil::getClassName(Block.clazz, true)) != std::string::npos)
+			{
+				std::cout << "getBlockById: " << method.name << " : " << method.sig << std::endl;
+			}
+		}
+
+		std::replace(IBlockState_name.begin(), IBlockState_name.end(), '/', '.');
+	}
+
+
+	
+	//jvmutil::dump_class(ItemStack, "ItemStack");
+	
+	//jvmutil::print_class_info(ItemArmor, "ItemArmor", "net.minecraft.v1_8.hephhaaapsheespeehheheaps");
+	//jvmutil::print_class_info(ItemBlock, "ItemBlock", "net.minecrbaft.v1_8.saphahhepsheahephapspahpp");
+	//jvmutil::print_class_info(WorldClient, "WorldClient", "net.minecraft.v1_8.phsseephehshaapeppepppepp");
+	//jvmutil::print_class_info(ScaledResolution, "ScaledResolution", "net.minecraft.v1_8.ehehssehessaesahhshshashe");
+	//jvmutil::print_class_info(ItemSword, "ItemSword", "net.minecraft.v1_8.phesphpseeaaapsehhshpasha");
+	//jvmutil::print_class_info(ItemAxe, "ItemAxe", "net.minecraft.v1_8.heasaepashspesseasssapaas");
+	//jvmutil::print_class_info(BlockPos, "BlockPos", "net.minecraft.v1_8.ahaeespaepsshehspeppaappe");
+	//jvmutil::print_class_info(AxisAlignedBB, "AxisAlignedBB", "net.minecraft.v1_8.aahapsaahsehhaeaesaeahsah");
+	//jvmutil::print_class_info(Timer, "Timer", "Timer");
+
+
+}
+int __stdcall entrypoint()
+{
+	AllocConsole();
+	ShowWindow(GetConsoleWindow(), SW_SHOW);
+	FILE* fDummy;
+	freopen_s(&fDummy, "CONIN$", "r", stdin);
+	freopen_s(&fDummy, "CONOUT$", "w", stderr);
+	freopen_s(&fDummy, "CONOUT$", "w", stdout);
+
+	if( cheat_main::get().init() == TRUE)
+	{
+		printf("[LunarSDKGenerator] Initialized.\n");
+		if ( cheat_main::get().env != nullptr)
+		{
+
+
+
+			dump();
+			//controller
+			
+			//jclass Keybinding = cheat_main::get().mapper()->findClass(26, 10, true);
+
+			//jvmutil::print_class_info(Keybinding);
+			//jvmutil::dump_class(Keybinding, "dumppb");
+
+
+			//jclass ItemProjectile = cheat_main::get().mapper()->findClass(2, 0, true);
+			//jclass ItemProjectile2 = cheat_main::get().mapper()->findClass(2, 0, true);
+			//jclass ItemProjectile3 = cheat_main::get().mapper()->findClass(2, 0, true);
+
+			//jvmutil::print_class_info(ItemProjectile, "ItemSnowball", );
+			//jvmutil::print_class_info(ItemProjectile2);
+			//jvmutil::print_class_info(ItemProjectile3);
+			
+
+		}
+		
+	}
+
+	printf("[LunarSDKGenerator] unloaded.");
+	FreeConsole();
+	FreeLibraryAndExitThread(h_mod, 0);
+
+	return 1;
+}
+
+BOOL APIENTRY DllMain( HMODULE hModule, DWORD reason, LPVOID lpReserved )
+{
+	if(reason == DLL_PROCESS_ATTACH)
+	{
+		h_mod = hModule;
+		CreateThread(nullptr, NULL, (LPTHREAD_START_ROUTINE)entrypoint, nullptr, NULL, nullptr);
+	}
+	
+	else if (reason == DLL_PROCESS_DETACH)
+	{
+		
+	}
+
+    return TRUE;
+}
+
+
+
+//@todo GuiInventory - fix
+//jclass GuiInventory = cheat_main::get().mapper()->findClass(0, 0, true, search_options_t
+//	{
+//		{},
+//		{ {"F", 2} }
+//});
+
+//jvmutil::print_class_info(GuiInventory, "GuiInventory", "net.minecraft.v1_8.eepehpssshpseaeepsspsssap");
+
+
+//@todo Packets extended classes have no fields so add method search option (voids)
+/*
+jclass C04PacketPlayerPosition = cheat_main::get().mapper()->findClass(5, 0, false);
+jvmutil::dump_class(cheat_main::get().mapper()->findClass("net.minecraft.v1_8.hpshhhephsheahapeaeaphaps$sashesheppspheheehasapahs"), "net.minecraft.v1_8.hpshhhephsheahapeaeaphaps$sashesheppspheheehasapahs");
+jvmutil::print_class_info(C04PacketPlayerPosition, "C04PacketPlayerPosition", "net.minecraft.v1_8.hpshhhephsheahapeaeaphaps$sashesheppspheheehasapahs");
+
+jclass C06PacketPlayerPosition = mapper->findClass("net.minecraft.v1_8.hpshhhephsheahapeaeaphaps$eppaahesspsspehphaapeessh");
+*/
+
+//jvmutil::print_class_info(cheat_main::get().mapper()->findClass("net.minecraft.v1_8.hshephapehhshsspeahesepas"));
+//sp
+//jvmutil::print_class_info(cheat_main::get().mapper()->findClass("net.minecraft.v1_8.ehpsaahheehspppessshahaah"));
+//base
+//jvmutil::print_class_info(cheat_main::get().mapper()->findClass("net.minecraft.v1_8.shhhsaaahsseepphesseppape"));
