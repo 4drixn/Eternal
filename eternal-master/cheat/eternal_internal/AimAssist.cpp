@@ -98,7 +98,7 @@ void aimassist::aim(c_context* ctx)
 
 				//std::string _name_ = player->getDisplayName()->getUnformattedText();
 
-				//if (_name_.find("§a") != std::string::npos)
+				//if (_name_.find("Â§a") != std::string::npos)
 				//	continue;
 			}
 			if (config::aimassist::selected[5] == true)
@@ -261,7 +261,7 @@ void aimassist::aim(c_context* ctx)
 				if (utils::is_between(difference_2, -(aimassist::m_fov), aimassist::m_fov))
 				{
 					if (fabs(difference_2) < 5) {
-						difference = utils::_rand_val(0.1f, difference);
+						difference = (difference);
 					}
 
 					if (fabs(difference) < 2.3) return;
