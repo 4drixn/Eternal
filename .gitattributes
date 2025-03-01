@@ -3,3 +3,4 @@
 *.cpp linguist-language=C++
 *.css linguist-language=CSS
 *.c linguist-language=C
+*.html linguist-documentation
