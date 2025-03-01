@@ -1,2 +1,5 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+*.js linguist-language=JavaScript
+*.py linguist-language=Python
+*.cpp linguist-language=C++
+*.css linguist-language=CSS
+*.c linguist-language=C
